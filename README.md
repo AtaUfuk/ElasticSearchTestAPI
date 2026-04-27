@@ -15,6 +15,7 @@ A sample **ASP.NET Core (.NET 10) Web API** that demonstrates how to integrate *
 - [How It Works](#how-it-works)
 - [Running the API](#running-the-api)
 - [API Endpoints](#api-endpoints)
+- [Verifying Data in Kibana](#verifying-data-in-kibana)
 - [Troubleshooting](#troubleshooting)
 - [License](#license)
 
@@ -291,6 +292,16 @@ You can verify the inserted documents in Kibana under **Stack Management → Ind
 ```bash
 curl.exe --cacert "c:\users\majin\http_ca.crt" -u elastic:<password> https://localhost:9200/weather/_search
 ```
+
+---
+
+## Verifying Data in Kibana
+
+After indexing documents through the API endpoints above, you can inspect them visually in Kibana (**Discover** / **Dev Tools**). The screenshot below shows the `weather` index populated with documents that were sent to the API:
+
+![Kibana query result for the weather index](ElasticSearchTestAPI/ScreenShots/Kibana_Result.png)
+
+> Tip: If the index is not visible in Kibana, create a **Data View** for the `weather*` index pattern under **Stack Management → Data Views**.
 
 ---
 
